@@ -1,8 +1,4 @@
-/*const Engine= Matter.Engine
-const World=Matter.World
-const Constraint=Matter.Constraint
-const Bodies=Matter.Bodies
-*/
+
 var girl, girlStill,girlRunning, girlRunningImg, girlRunningRight, girlRunningRightImg, girlRunningLeft,girlRunningLeftImg
 var coin, coinImg
 var life=3, lifeImg_3, lifeImg_2, lifeImg_1, lifeImge_0,lifeObj
@@ -103,7 +99,7 @@ drawSprites();
 
 if(keyDown("space"))
 {
-  if(gameState==="end")
+  if(gameState==="serve")
   {
   gameState="play"
   }
@@ -137,6 +133,7 @@ function spawnCoins()
       
       coin.scale=0.1
       coin.lifetime=300;
+      coin.velocityY=1
      coin.depth=girl.depth
       girl.depth+=1
       coinGrp.add(coin)
@@ -174,6 +171,7 @@ function spawnCoins()
       
       stone.scale=0.3
       stone.lifetime=300;
+      stone.velocityY=1
       stone.depth=girl.depth
       girl.depth+=1
       stoneGrp.add(stone)
@@ -190,20 +188,7 @@ function spawnCoins()
       headInjured.addImage(headInjuredImg)
     }
 
-    function mousePressed()
-    {
-      stone.velocityY=30
-      coin.velocityY=5
-
-      if(gameState=="serve")
-      {
-          gameState="play"
-          stone.velocityY=30
-          coin.velocityY=5
-    
-      }
-
-    }
+   
 function gamePlay()
 {
   score = score + Math.round(getFrameRate()/60);
