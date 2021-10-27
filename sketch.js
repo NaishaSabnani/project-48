@@ -132,7 +132,7 @@ function spawnCoins()
       coin.addAnimation("coinImg",coinImg)
       
       coin.scale=0.1
-      coin.lifetime=300;
+      coin.lifetime=500;
       coin.velocityY=1
      coin.depth=girl.depth
       girl.depth+=1
@@ -170,7 +170,7 @@ function spawnCoins()
      
       
       stone.scale=0.3
-      stone.lifetime=300;
+      stone.lifetime=500;
       stone.velocityY=1
       stone.depth=girl.depth
       girl.depth+=1
@@ -184,8 +184,8 @@ function spawnCoins()
     {
       stoneGrp.remove()
       life-=1
-      headInjured=createSprite(girl.x, girl.y)
-      headInjured.addImage(headInjuredImg)
+      //headInjured=createSprite(girl.x, girl.y)
+      //headInjured.addImage(headInjuredImg)
     }
 
    
