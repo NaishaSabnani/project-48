@@ -133,7 +133,7 @@ function spawnCoins()
       
       coin.scale=0.1
       coin.lifetime=500;
-      coin.velocityY=1
+      coin.velocityY=3
      coin.depth=girl.depth
       girl.depth+=1
       coinGrp.add(coin)
@@ -171,7 +171,7 @@ function spawnCoins()
       
       stone.scale=0.3
       stone.lifetime=500;
-      stone.velocityY=1
+      stone.velocityY=3
       stone.depth=girl.depth
       girl.depth+=1
       stoneGrp.add(stone)
